@@ -1,0 +1,64 @@
+/* 🌿 页面整体样式设置 */
+body {
+  margin: 0;
+  padding: 60px 20px;
+  background-color: #fdf6e3;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🍄 标题样式 */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* ✨ 诗歌内容样式 */
+.poem {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* 🌿 树叶边框样式（顶部和底部） */
+.leaf-top, .leaf-bottom {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  z-index: 10;
+  pointer-events: none;
+}
+.leaf-top {
+  top: 0;
+}
+.leaf-bottom {
+  bottom: 0;
+}
+
+/* 🌿 树叶边框样式（左右两边） */
+.leaf-left, .leaf-right {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  font-size: 24px;
+  line-height: 2;
+  z-index: 10;
+  pointer-events: none;
+}
+.leaf-left {
+  left: 0;
+  text-align: left;
+  padding-left: 5px;
+}
+.leaf-right {
+  right: 0;
+  text-align: right;
+  padding-right: 5px;
+}

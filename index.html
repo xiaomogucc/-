@@ -1,107 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh"> <!-- 设置网页语言为中文 -->
+<html lang="zh">
 <head>
-  <meta charset="UTF-8"> <!-- 设置字符编码为 UTF-8，支持中文 -->
-  <title>我的蘑菇角落</title> <!-- 网页标题，显示在浏览器标签上 -->
-
-<!-- CSS 部分（写在 <head> 里的 <style> 标签中） -->
-  
- 
-  <style>
-    /* 🌿 页面整体样式设置 */
-    body {
-      margin: 0; /* 去除默认边距 */
-      padding: 60px 20px; /* 页面上下左右的内边距 */
-      background-color: #fdf6e3; /* 背景颜色，柔和米色 */
-      font-family: "Noto Sans", sans-serif; /* 使用无衬线字体 */
-      display: flex; /* 使用弹性布局 */
-      flex-direction: column; /* 垂直排列内容 */
-      align-items: center; /* 内容居中对齐 */
-    }
-
-    /* 🍄 标题样式 */
-    .title {
-      font-size: 24px; /* 字体大小 */
-      font-weight: bold; /* 加粗 */
-      margin-bottom: 80px; /* 与下方内容的间距 */
-      text-align: center; /* 居中对齐 */
-    }
-
-    /* ✨ 诗歌内容样式 */
-    .poem {
-      max-width: 600px; /* 最大宽度，防止太宽 */
-      text-align: center; /* 居中对齐 */
-      line-height: 1.8; /* 行距 */
-      white-space: pre-wrap; /* 保留换行和空格格式 */
-    }
-
-    /* 🌿 树叶边框样式（顶部和底部） */
-    .leaf-top, .leaf-bottom {
-      position: fixed; /* 固定在页面位置 */
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 24px;
-      z-index: 10; /* 保证树叶在最上层 */
-      pointer-events: none; /* 不影响鼠标点击 */
-    }
-    .leaf-top {
-      top: 0; /* 顶部位置 */
-    }
-    .leaf-bottom {
-      bottom: 0; /* 底部位置 */
-    }
-
-    /* 🌿 树叶边框样式（左右两边） */
-    .leaf-left, .leaf-right {
-      position: fixed;
-      top: 0;
-      height: 100%;
-      font-size: 24px;
-      line-height: 2; /* 树叶之间的间距 */
-      z-index: 10;
-      pointer-events: none;
-    }
-    .leaf-left {
-      left: 0;
-      text-align: left;
-      padding-left: 5px;
-    }
-    .leaf-right {
-      right: 0;
-      text-align: right;
-      padding-right: 5px;
-    }
-  </style>
-</head
-
-<!-- HTML 部分 -->
-  
+  <meta charset="UTF-8">
+  <title>我的蘑菇角落</title>
+  <link rel="stylesheet" href="style.css"> <!-- 引入外部 CSS 文件 -->
+</head>
 <body>
 
   <!-- 🌿 页面四周树叶装饰 -->
-
-<!-- 顶部树叶：固定在页面最上方 -->
-<div class="leaf-top">🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</div>
-
-<!-- 底部树叶：固定在页面最下方 -->
-<div class="leaf-bottom">🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</div>
-
-<!-- 左边竖排树叶：从上到下排列在页面左侧 -->
-<div class="leaf-left">
-  🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿
-</div>
-
-<!-- 右边竖排树叶：从上到下排列在页面右侧 -->
-<div class="leaf-right">
-  🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿
-</div>
-
+  <div class="leaf-top">🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</div>
+  <div class="leaf-bottom">🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</div>
+  <div class="leaf-left">
+    🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿
+  </div>
+  <div class="leaf-right">
+    🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿<br>🌿
+  </div>
+    <div id="current-time" class="time"></div>
 
   <!-- 🍄 页面标题 -->
   <div class="title">
-    <br><br><br> <!-- 空行用于视觉偏移 -->
+    <br><br><br>
     🍄我是一朵小蘑菇🍄
+
+
   </div>
 
   <!-- ✨ 诗歌内容 -->
@@ -143,5 +65,10 @@
     回到没有剧本的森林  
     回到我自己
   </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+<!-- 🕒 当前时间显示 -->
+<div id="current-time" class="time"></div>
